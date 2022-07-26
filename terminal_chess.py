@@ -227,7 +227,7 @@ class Bishop:
                 updateBoard()
         else:
             for i in range(1, n + 1):
-                if lst[init_file - i][init_rank + i] != 10:
+                if lst[init_file + i][init_rank - i] != 10:
                     collision_lst.append(lst[init_file + i][init_rank - i])
             collision_count = len(collision_lst)
             if collision_count == 1 and sameColor(lst[init_file + n][init_rank - n], self):
@@ -818,7 +818,7 @@ class Queen:
                 updateBoard()
         else:
             for i in range(1, n + 1):
-                if lst[init_file - i][init_rank + i] != 10:
+                if lst[init_file + i][init_rank - i] != 10:
                     collision_lst.append(lst[init_file + i][init_rank - i])
             collision_count = len(collision_lst)
             if collision_count == 1 and sameColor(lst[init_file + n][init_rank - n], self):
